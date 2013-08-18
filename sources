@@ -1,0 +1,27 @@
+TARGETNAME=autofixer
+
+UMTYPE=console
+
+USE_MSVCRT=NO
+
+SOURCES=\
+	instructions.c\
+	main.c\
+	objectmgr.c\
+	test_obj_mgr.c\
+	test_tsc.c\
+	test_tsstr.c\
+	test_var_table.c\
+	tsc.c\
+	tsee.c\
+	TSLLex.c\
+	TSLYacc.c\
+	tsstr.c\
+	VarHashTable.c\
+	tsfx.cpp
+
+TSLLex.c:tsl.l
+	@flex -L -oTSLLex.c tsl.l
+
+TSLYacc.c:tsl.y
+	@bison -d -o TSLYacc.c tsl.y

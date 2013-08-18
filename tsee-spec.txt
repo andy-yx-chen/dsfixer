@@ -1,0 +1,18 @@
+Troubleshooting Execution Engine Specification
+
+1. Introduction
+
+Troubleshooting Execution Engine (TSEE) is a execution engine which can be used to execute Troubleshooting language (TSL) intermediate code.
+This specification includes both TSL, TSIL specification and the design of TSEE.
+
+2. Troubleshooting Language
+
+2.1 Lex of TSL
+
+Variables: all variable names need to be started with $ symbol.
+Strings: String is a sequence of chars quota by "
+Numbers: number can be start from digital or 0x follow by digital.
+Comments: comment strings are en-quote by /* and */
+Please refer to tsl.l for more details.
+
+2.2 Syntax of TSL
